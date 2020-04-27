@@ -1,0 +1,10 @@
+[Unit]
+Description=Creates snapshot of rtsp-server stream
+
+[Service]
+Type=oneshot
+ExecStart=/opt/raspi-snapshot/snapshot.sh
+Requires=rtsp-server.service
+
+[Install]
+WantedBy=multi-user.target

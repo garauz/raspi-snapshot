@@ -1,0 +1,11 @@
+[Unit]
+Description=Creates snapshot every 10 seconds
+
+[Timer]
+OnBootSec=0
+OnUnitActiveSec=10s
+AccuracySec=500ms
+Unit=raspi-snapshot.service
+
+[Install]
+WantedBy=multi-user.target
